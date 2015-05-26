@@ -4,9 +4,9 @@ machine:
     America/Los_Angeles
  
   # Version of ruby to use
-  ruby:
-    version:
-      1.8.7-p358-falcon-perft
+#  ruby:
+#    version:
+#      1.8.7-p358-falcon-perft
  
   # Override /etc/hosts
   hosts:
@@ -20,10 +20,10 @@ machine:
 ########################
 # Customize checkout
 ########################
-checkout:
-  post:
-    - git submodule update --init # use submodules
-    - mv config/database.yml.ci config/database.yml # use a test version of your database.yml file
+#checkout:
+#  post:
+#    - git submodule update --init # use submodules
+#    - mv config/database.yml.ci config/database.yml # use a test version of your database.yml file
  
 ########################
 # Customize dependencies
@@ -41,9 +41,9 @@ dependencies:
 ########################
 # Customize database setup
 ########################
-database:
-  pre:
-    - mv config/database.yml.ci config/database.yml # completely ignore Circle's database.yml
+#database:
+#  pre:
+#    - mv config/database.yml.ci config/database.yml # completely ignore Circle's database.yml
  
 ########################
 # Customize test commands
